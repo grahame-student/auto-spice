@@ -17,3 +17,6 @@ jobs:
         
       - name: Install Spice
         run: sudo apt-get install ngspice
+
+      - name: 
+        run: ngspice simple.cir
