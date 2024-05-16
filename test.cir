@@ -1,0 +1,16 @@
+Test case for simple circuit
+.include simple.cir
+
+.control
+op
+if out < 0.6
+  echo pass
+else
+  echo "fail: 'out' below 0.6V"
+  print out
+end
+
+exit
+.endc
+
+.end
