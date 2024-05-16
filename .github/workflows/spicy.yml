@@ -1,0 +1,19 @@
+---
+name: Spice Testing
+
+on:
+  push:
+  
+permissions: read-all
+
+jobs:
+  spicy:
+    runs-on: ubuntu-latest
+    name: Test spice circuit
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.1.5
+        
+      - name: Install Spice
+        run: apt-get install spice
