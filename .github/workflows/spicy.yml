@@ -19,4 +19,8 @@ jobs:
         run: sudo apt-get install ngspice
 
       - name: 
-        run: ngspice test.cir
+        run: |
+          result=$(ngspice test.cir | grep -c fail)
+          if [ $var > 0 ]; then
+            exit 1
+          fi
