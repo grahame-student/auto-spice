@@ -21,6 +21,6 @@ jobs:
       - name: 
         run: |
           result=$(ngspice test.cir | grep -c fail)
-          if [ $var > 0 ]; then
+          if [ $result > 0 ]; then
             exit 1
           fi
